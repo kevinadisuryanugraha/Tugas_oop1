@@ -5,13 +5,13 @@ class Lemari {
     // Property dengan access modifier sesuai permintaan
     public $merk;
     protected $warna;
-    private $kapasitas;
+    private $isi;
 
     // Constructor
-    public function __construct($merk, $warna, $kapasitas) {
+    public function __construct($merk, $warna, $isi) {
         $this->merk = $merk;
         $this->warna = $warna;
-        $this->kapasitas = $kapasitas;
+        $this->isi = $isi;
         echo "Lemari {$this->merk} telah dibuat.<br>";
     }
 
@@ -25,8 +25,8 @@ class Lemari {
         $this->warna = $warna;
     }
 
-    public function setKapasitas($kapasitas) {
-        $this->kapasitas = $kapasitas;
+    public function setIsi($isi) {
+        $this->isi = $isi;
     }
 
     // Getter
@@ -34,8 +34,8 @@ class Lemari {
         return $this->warna;
     }
 
-    public function getKapasitas() {
-        return $this->kapasitas;
+    public function getIsi() {
+        return $this->isi;
     }
 
     // Method
@@ -50,8 +50,8 @@ class Baju extends Lemari {
     private $bahan;
 
     // Constructor
-    public function __construct($merk, $warna, $kapasitas, $bahan) {
-        parent::__construct($merk, $warna, $kapasitas);
+    public function __construct($merk, $warna, $isi, $bahan) {
+        parent::__construct($merk, $warna, $isi);
         $this->bahan = $bahan;
         echo "Lemari baju dari {$this->bahan} telah dibuat.<br>";
     }
